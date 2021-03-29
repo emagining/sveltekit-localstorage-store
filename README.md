@@ -1,16 +1,16 @@
 # localStorage store for SvelteKit
 Store that writes to window.localStorage - working on SvelteKit svelte/kit
 
-Based on joshnuss/localStorageStore(https://gist.github.com/joshnuss/aa3539daf7ca412202b4c10d543bc077), but working on SvelteKit.
+Based on [joshnuss/localStorageStore](https://gist.github.com/joshnuss/aa3539daf7ca412202b4c10d543bc077), but working on SvelteKit.
 #### Making it work on sveltekit
 window.localStorage isn't available on server and since SvelteKit first renders every component on the server trying to access window will make it break.
 To solve this - you need to check if you are in the client first. 
-Read more in the SvelteKit Docs(https://kit.svelte.dev/docs#troubleshooting-server-side-rendering)
+Read more in the [SvelteKit Docs](https://kit.svelte.dev/docs#troubleshooting-server-side-rendering)
 
 ## Create your store
 Create a Svelte store backed by window.localStorage.
 It will persist the store's data locally.
-More info: joshnuss/localStorageStore(https://gist.github.com/joshnuss/aa3539daf7ca412202b4c10d543bc077)
+More info: [joshnuss/localStorageStore](https://gist.github.com/joshnuss/aa3539daf7ca412202b4c10d543bc077)
 
 ```javascript
 import { writable as internal, get } from 'svelte/store'
