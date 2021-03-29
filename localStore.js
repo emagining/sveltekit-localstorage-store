@@ -1,6 +1,4 @@
 import { writable as internal, get } from 'svelte/store'
-// localStorage isn't available on server 
-// -> check if in browser before trying to access it
 import { browser } from '$app/env'
 
 export function writable(key, initialValue) {
@@ -25,4 +23,3 @@ export function writable(key, initialValue) {
     subscribe
   }
 } 
-// check joshnuss code for more info https://gist.github.com/joshnuss/aa3539daf7ca412202b4c10d543bc077
